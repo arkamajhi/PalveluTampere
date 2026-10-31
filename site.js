@@ -14,6 +14,10 @@
   toggle?.addEventListener("click", () => setLanguage(language === "fi" ? "en" : "fi"));
   menu?.addEventListener("click", () => document.getElementById("nav")?.classList.toggle("open"));
   document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => document.getElementById("nav")?.classList.remove("open")));
+  document.querySelectorAll("[data-prefill-fi][data-prefill-en]").forEach(link => link.addEventListener("click", () => {
+    const details = document.querySelector("#yhteys textarea[name='details']");
+    if (details) details.value = language === "fi" ? link.dataset.prefillFi : link.dataset.prefillEn;
+  }));
   document.querySelectorAll("form[data-service]").forEach(form => form.addEventListener("submit", e => {
     e.preventDefault();
     const f = new FormData(form), select = form.querySelector("select"), service = select?.options[select.selectedIndex]?.dataset[language] || form.dataset.service;

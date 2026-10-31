@@ -4,9 +4,9 @@ Static website for Palvelu Tampere, prepared for GitHub Pages and the custom dom
 
 ## Pages
 
-- Home: `index.html`
-- Cleaning: `siivouspalvelut-tampere/`
-- Moving: `muuttopalvelu-tampere/`
+- Home: `index.html`, with direct links to the two price guides
+- Cleaning: `siivouspalvelut-tampere/`, with three home-size estimates and three complete move-out cleaning prices
+- Moving: `muuttopalvelu-tampere/`, with three crew rates and a home-size budget guide
 
 The site files are at the repository root. The GitHub Actions workflow publishes them whenever changes are pushed to `main`.
 
