@@ -34,4 +34,6 @@ The included workflow publishes changes pushed to `main`.
 
 Every page has a floating booking button that opens the guided booking modal. Visitors select a service with buttons, add job details, and leave a phone number. After successful submission, the modal confirms that the team will call to confirm the booking.
 
-GitHub Pages is static, so email notifications need a recipient inbox. Set `window.PT_BOOKING_EMAIL` in `booking-config.js` to the inbox that should receive booking requests. The form uses FormSubmit's AJAX endpoint; its first email requires inbox activation. Until the inbox is configured, the form tells visitors to call +358 44 931 8824, and does not claim that a request was sent.
+GitHub Pages is static, so booking notifications use FormSubmit's AJAX endpoint. The recipient is configured in `booking-config.js`. FormSubmit sends a verification email on first use; confirm the inbox before relying on live booking notifications. The recipient address is present in the public client-side configuration and can be seen by visitors inspecting the site source.
+
+The final booking form includes WebMCP declarative annotations (`toolname` and `tooldescription`) for compatible browser agents. It still requires the customer to submit the booking request, and every request is described as pending phone confirmation. `llms.txt`, canonical URLs, JSON-LD service/business data, crawlable page links, `robots.txt`, and `sitemap.xml` provide machine-readable site and service information.

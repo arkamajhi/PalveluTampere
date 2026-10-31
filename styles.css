@@ -11,6 +11,7 @@
 body.booking-open{overflow:hidden}
 .booking-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
 .booking-modal.is-open{display:flex}
+.booking-modal:target{display:flex}
 .booking-backdrop{position:absolute;inset:0;background:rgba(15,24,25,.72);backdrop-filter:blur(7px)}
 .booking-dialog{position:relative;width:min(100%,620px);max-height:min(92vh,850px);overflow:auto;border-radius:28px;background:#fff;padding:clamp(24px,5vw,48px);box-shadow:0 28px 100px rgba(0,0,0,.3);animation:booking-in .24s ease-out}
 @keyframes booking-in{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}

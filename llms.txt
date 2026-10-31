@@ -1,0 +1,33 @@
+# Palvelu Tampere
+
+> Siivous- ja muuttopalvelut Tampereella ja Pirkanmaalla.
+
+Palvelu Tampere tarjoaa kotisiivousta, muuttosiivousta, yritys- ja toimistosiivousta, porrassiivousta, perussiivousta, ikkunanpesua, kotimuuttoja, yritysmuuttoja, muuttoapua, huonekalukuljetuksia ja muuttolaatikoita Tampereella sekä Pirkanmaalla.
+
+## Varaus
+
+Asiakas valitsee palvelun, kertoo kohteen koon tai muuton matkan, toivotun päivän ja yhteystiedot. Lähetyksen jälkeen yritys soittaa asiakkaalle ja vahvistaa varauksen. Varauspyyntö ei yksin vahvista käyntiaikaa.
+
+## Palvelusivut
+
+- [Siivouspalvelut Tampereella](https://palvelutampere.fi/siivouspalvelut-tampere/)
+- [Muuttopalvelut Tampereella](https://palvelutampere.fi/muuttopalvelu-tampere/)
+- [Kotisiivous](https://palvelutampere.fi/kotisiivous-tampere/)
+- [Muuttosiivous](https://palvelutampere.fi/muuttosiivous-tampere/)
+- [Yritys- ja toimistosiivous](https://palvelutampere.fi/yrityssiivous-tampere/)
+- [Porrassiivous](https://palvelutampere.fi/porrassiivous-tampere/)
+- [Perussiivous](https://palvelutampere.fi/perussiivous-tampere/)
+- [Ikkunanpesu](https://palvelutampere.fi/ikkunanpesu-tampere/)
+- [Kotimuutto](https://palvelutampere.fi/kotimuutto-tampere/)
+- [Yritysmuutto](https://palvelutampere.fi/yritysmuutto-tampere/)
+- [Muuttoapu](https://palvelutampere.fi/muuttoapu-tampere/)
+- [Huonekalukuljetus](https://palvelutampere.fi/huonekalukuljetus-tampere/)
+- [Muuttolaatikot](https://palvelutampere.fi/muuttolaatikot-tampere/)
+
+## Contact
+
+Phone: +358 44 931 8824
+
+Business ID: 3549202-5
+
+[Request a booking](https://palvelutampere.fi/)
