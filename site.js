@@ -1,16 +1,25 @@
 (() => {
+  const LANGUAGE_KEY = "palvelutampere-language";
   let language = "fi";
+  try {
+    const savedLanguage = window.localStorage.getItem(LANGUAGE_KEY);
+    if (savedLanguage === "fi" || savedLanguage === "en") language = savedLanguage;
+  } catch (_) {}
   const toggle = document.getElementById("lang");
   const menu = document.getElementById("menu");
-  function setLanguage(next) {
+  function setLanguage(next, remember = true) {
     language = next;
     document.documentElement.lang = next;
     document.querySelectorAll("[data-fi][data-en]").forEach(el => {
       if (el.tagName === "OPTION") { el.textContent = el.dataset[next]; return; }
       el.innerHTML = el.dataset[next];
     });
-    toggle.innerHTML = next === "fi" ? "<span class='active'>FI</span> / <span>EN</span>" : "<span>FI</span> / <span class='active'>EN</span>";
+    if (toggle) toggle.innerHTML = next === "fi" ? "<span class='active'>FI</span> / <span>EN</span>" : "<span>FI</span> / <span class='active'>EN</span>";
+    if (remember) {
+      try { window.localStorage.setItem(LANGUAGE_KEY, next); } catch (_) {}
+    }
   }
+  setLanguage(language, false);
   toggle?.addEventListener("click", () => setLanguage(language === "fi" ? "en" : "fi"));
   menu?.addEventListener("click", () => document.getElementById("nav")?.classList.toggle("open"));
   document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => document.getElementById("nav")?.classList.remove("open")));

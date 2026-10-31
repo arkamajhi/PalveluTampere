@@ -33,4 +33,4 @@ DNS must point to GitHub Pages for this hosting setup. The included `CNAME` file
 
 ## Local preview
 
-Open `index.html` in a browser, or serve this folder with any static file server.
+Open `index.html` in a browser, or serve this folder with any static file server. Relative asset paths also work when opened from the extracted folder. Remote photos and analytics require an internet connection.
