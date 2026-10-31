@@ -1,36 +1,37 @@
 # Palvelu Tampere
 
-Static website for Palvelu Tampere, prepared for GitHub Pages and the custom domain `palvelutampere.fi`.
+A Finnish-first, bilingual static website for moving and cleaning services in Tampere and Pirkanmaa.
 
 ## Pages
 
-- Home: `index.html`, with direct links to the two price guides
-- Cleaning: `siivouspalvelut-tampere/`, with three home-size estimates and three complete move-out cleaning prices
-- Moving: `muuttopalvelu-tampere/`, with three crew rates and a home-size budget guide
+- `index.html`: the two service choices
+- `siivouspalvelut-tampere/`: cleaning hub and cleaning reviews
+- `muuttopalvelu-tampere/`: moving hub and moving reviews
+- Dedicated detail pages for home, move-out, office/business, stairwell, deep, special and window cleaning; home and business moves, moving help, furniture transport and moving boxes.
 
-The site files are at the repository root. The GitHub Actions workflow publishes them whenever changes are pushed to `main`.
+## Prices
+
+Prices appear on the service cards and their dedicated pages. Published rates and packages include 25.5% VAT. Move-out and home-move packages use one fixed amount for each home-size category.
+
+## Edit reviews
+
+Open the relevant hub or service page and find `data-review-carousel`. Each review is one hard-coded `<article class="review-slide">` inside `.review-track`. Copy, edit or remove an article; the carousel creates the correct number of dots automatically. Cleaning feedback appears only on cleaning pages and moving feedback only on moving pages. Review photos are illustrative images and visibly captioned; replace them with customer-approved review photos if available.
+
+## Media and languages
+
+Hero videos use muted autoplay and local WebP poster images for offline fallback. Video playback needs an internet connection. Finnish is the default language. The EN/FI switch is saved in `localStorage` and follows visitors between pages on this domain.
 
 ## Publish on GitHub Pages
 
-1. Create an empty GitHub repository (do not add a README or license there).
-2. From this folder, run the following commands, replacing `USERNAME/REPOSITORY` with the new repository path:
+1. Create a repository and upload these files from its root.
+2. In **Settings → Pages**, set the source to **GitHub Actions**.
+3. Add `palvelutampere.fi` as the custom domain and configure DNS with the registrar.
+4. Enable HTTPS after DNS has propagated.
 
-   ```sh
-   git init -b main
-   git add .
-   git commit -m "Add Palvelu Tampere website"
-   git remote add origin https://github.com/USERNAME/REPOSITORY.git
-   git push -u origin main
-   ```
+The included workflow publishes changes pushed to `main`.
 
-   Or upload the files from this ZIP through GitHub's web interface.
-3. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-4. The included workflow deploys the site. Wait for its first successful run.
-5. In **Settings → Pages**, enter `palvelutampere.fi` as the custom domain and enable **Enforce HTTPS** when available.
-6. Configure the domain's DNS at its registrar for GitHub Pages. Use GitHub's current custom-domain instructions: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+## Guided booking requests
 
-DNS must point to GitHub Pages for this hosting setup. The included `CNAME` file records the intended domain; GitHub's Pages settings also need the custom domain configured.
+Every page has a floating booking button that opens the guided booking modal. Visitors select a service with buttons, add job details, and leave a phone number. After successful submission, the modal confirms that the team will call to confirm the booking.
 
-## Local preview
-
-Open `index.html` in a browser, or serve this folder with any static file server. Relative asset paths also work when opened from the extracted folder. Remote photos and analytics require an internet connection.
+GitHub Pages is static, so email notifications need a recipient inbox. Set `window.PT_BOOKING_EMAIL` in `booking-config.js` to the inbox that should receive booking requests. The form uses FormSubmit's AJAX endpoint; its first email requires inbox activation. Until the inbox is configured, the form tells visitors to call +358 44 931 8824, and does not claim that a request was sent.
